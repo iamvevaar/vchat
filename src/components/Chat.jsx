@@ -5,17 +5,18 @@ import {signOut} from "firebase/auth"
 import { auth } from '../firebase'
 import Messages from './Messages'
 import { AuthContext } from '../context/AuthContext'
+import { FiLogOut } from 'react-icons/fi';
 const Chat = () => {
   const {currentUser} = useContext(AuthContext);
   const {data} = useContext(ChatContext);
   return (
     <div className='chat'>
       <div className="chatInfo">
-        <span>{data.user?.displayName}</span>
+        <span className='reciever'>{data.user?.displayName}</span>
         <div className="maindata">
         <img src={currentUser.photoURL} alt="" />
         <span>{currentUser.displayName}</span>
-        <button onClick={()=>signOut(auth)}>Logout</button>
+        <FiLogOut className='logoutIcon' onClick={()=>signOut(auth)}/>
         </div>
       </div>
     <Messages/>
@@ -25,3 +26,5 @@ const Chat = () => {
 }
 
 export default Chat
+
+// 

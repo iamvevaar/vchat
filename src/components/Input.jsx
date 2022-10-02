@@ -10,6 +10,7 @@ import {
   Timestamp,
   updateDoc,
 } from "firebase/firestore";
+import { FiImage } from "react-icons/fi";
 import { db, storage } from "../firebase";
 import { v4 as uuid } from "uuid";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
@@ -94,7 +95,7 @@ const Input = () => {
           onChange={(e) => setImg(e.target.files[0])}
         />
         <label htmlFor="file">
-          <img className="special" src={IMAGE} alt="" />
+          <FiImage className="special"/>
         </label>
         <button onClick={handleSend}>Send</button>
       </div>
