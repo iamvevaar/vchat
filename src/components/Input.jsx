@@ -21,6 +21,10 @@ const Input = () => {
   const { currentUser } = useContext(AuthContext);
   const { data } = useContext(ChatContext);
 
+  const handleKey = (e) => {
+    e.code === "Enter" && handleSend();
+  };
+
   const handleSend = async () => {
     if (img) {
       const storageRef = ref(storage, uuid());
@@ -80,9 +84,10 @@ const Input = () => {
         placeholder="Type something..."
         onChange={(e) => setText(e.target.value)}
         value={text}
+        onKeyDown={handleKey}
       />
       <div className="send">
-        <input
+        <input required
           type="file"
           style={{ display: "none" }}
           id="file"

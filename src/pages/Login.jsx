@@ -25,15 +25,15 @@ const Login = () => {
   return (
     <div className='mainContainer'>
         <div className="formContainer">
-            <span className="logo">Vchat</span>
+            <span className="logo">VCHAT</span>
             <span className="title">Login</span>
             <form onSubmit={handleSubmit}>
                 <input type="email" placeholder='Your Email' />
                 <input type="password" placeholder='Password' />
                 <button>Login IN</button>
-                {err && <span> Something Went Goes Wrong </span>}
+                {err && <span className='error'> Something Went Goes Wrong </span>}
             </form>
-            <p>You Don't Have An Account ?<Link to="/register"> Register </Link> </p>
+            <p className='desc'>You Don't Have An Account ?<Link to="/register"> Register </Link> </p>
         </div>
         
     </div>
