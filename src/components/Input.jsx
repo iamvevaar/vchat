@@ -1,4 +1,3 @@
-import IMAGE from "../assets/imageDoor.png";
 import React from "react";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
