@@ -6,3 +6,13 @@
     margin: 0;
     text-decoration: none;
 }
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: rgb(0, 0, 0);;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(22, 26, 29);
+}

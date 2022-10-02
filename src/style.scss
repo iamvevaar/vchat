@@ -15,7 +15,6 @@
       color: white;
     }
     background-color: rgb(10, 14, 15);
-    // background-color: wheat;
     padding: 20px 60px;
     border-radius: 10px;
     display: flex;
@@ -97,26 +96,27 @@
         font-size: 36px;
         color: white;
       }
-      .user {
-        display: flex;
-        gap: 10px;
-        img {
-          background-color: white;
-          height: 24px;
-          width: 24px;
-          object-fit: cover;
-          border-radius: 50%;
-        }
-        button {
-          background-color: rgb(206, 173, 88);
-          border: 1px solid red;
-          padding: 3px;
-          color: red;
-          font-size: 10px;
-          cursor: pointer;
-        }
-      }
+    //   .user {
+    //     display: flex;
+    //     gap: 10px;
+    //     img {
+    //       background-color: white;
+    //       height: 24px;
+    //       width: 24px;
+    //       object-fit: cover;
+    //       border-radius: 50%;
+    //     }
+    //     button {
+    //       background-color: rgb(206, 173, 88);
+    //       border: 1px solid red;
+    //       padding: 3px;
+    //       color: red;
+    //       font-size: 10px;
+    //       cursor: pointer;
+    //     }
+    //   }
     }
+
     .search {
       border-bottom: 1px solid gray;
       .searchForm {
@@ -127,9 +127,13 @@
           color: white;
           outline: none;
         }
-      }
+      }      
     }
 
+
+
+
+    
     .userChat {
       display: flex;
       padding: 10px;
@@ -140,7 +144,7 @@
       align-items: center;
       font-size: 24px;
       &:hover {
-        background-color: rgba(100, 56, 10, 0.341);
+        background-color: rgb(10, 14, 15);
       }
 
       img {
@@ -166,8 +170,14 @@
         }
       }
     }
-  }
-  .chat {
+}
+
+
+
+
+
+
+.chat {
     position: relative;
     flex: 2;
 
@@ -208,6 +218,7 @@
         border-radius: 50%;
       }
       .logoutIcon {
+        cursor: pointer;
         color: red;
       }
     }
@@ -252,7 +263,7 @@
             margin-bottom: 5px;
             font-size: 12px;
             max-width: max-content;
-          }       
+          }
         }
         &.owner {
           flex-direction: row-reverse;
