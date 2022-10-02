@@ -74,6 +74,8 @@
             color: rgb(0, 0, 0);
             .logo{
                 font-weight: bold;
+                font-size: 36px;
+                
             }
             .user{
                 display: flex;
@@ -84,7 +86,7 @@
                     width: 24px;
                     object-fit: cover;
                     border-radius: 50%;
-                };
+                };                
                 button{
                     background-color:rgb(206, 173, 88) ;
                     border: 1px solid red ;
@@ -140,6 +142,9 @@
     .chat{
         flex: 2;
         .chatInfo{
+            span{
+                text-transform: uppercase;
+            }
             display: flex;
             align-items: center;
             font-size: 35px;

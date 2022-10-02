@@ -1,18 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../style.scss";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../firebase';
+import { useNavigate  , Link} from "react-router-dom";
 
 const Login = () => {
+
+  const [err, setErr] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const email = e.target[0].value;
+    const password = e.target[1].value;
+
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/")
+    } catch (err) {
+      setErr(true);
+    }
+  };
+
   return (
     <div className='mainContainer'>
         <div className="formContainer">
             <span className="logo">Vchat</span>
             <span className="title">Login</span>
-            <form>
-                <input type="email" placeholder='Your Email' name="" id="" />
-                <input type="password" placeholder='Password' name="" id="" />
+            <form onSubmit={handleSubmit}>
+                <input type="email" placeholder='Your Email' />
+                <input type="password" placeholder='Password' />
                 <button>Login IN</button>
+                {err && <span> Something Went Goes Wrong </span>}
             </form>
-            <p>You Don't Have An Account ? Register</p>
+            <p>You Don't Have An Account ?<Link to="/register"> Register </Link> </p>
         </div>
         
     </div>
