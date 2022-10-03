@@ -102,11 +102,18 @@
       border-bottom: 1px solid gray;
       .searchForm {
         padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         input {
           background-color: transparent;
           border: none;
           color: white;
           outline: none;
+        }
+        .searchFormIcon{
+          color: white;
+          margin-top: 5px;
         }
       }
     }
