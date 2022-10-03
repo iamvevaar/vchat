@@ -96,25 +96,6 @@
         font-size: 36px;
         color: white;
       }
-    //   .user {
-    //     display: flex;
-    //     gap: 10px;
-    //     img {
-    //       background-color: white;
-    //       height: 24px;
-    //       width: 24px;
-    //       object-fit: cover;
-    //       border-radius: 50%;
-    //     }
-    //     button {
-    //       background-color: rgb(206, 173, 88);
-    //       border: 1px solid red;
-    //       padding: 3px;
-    //       color: red;
-    //       font-size: 10px;
-    //       cursor: pointer;
-    //     }
-    //   }
     }
 
     .search {
@@ -127,59 +108,56 @@
           color: white;
           outline: none;
         }
-      }      
-    }
-
-
-
-
-    
-    .userChat {
-      display: flex;
-      padding: 10px;
-      gap: 10px;
-      color: white;
-      text-transform: capitalize;
-      cursor: pointer;
-      align-items: center;
-      font-size: 24px;
-      &:hover {
-        background-color: rgb(10, 14, 15);
-      }
-
-      img {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-
-      .userChatInfo {
-        span {
-          font-size: 18px;
-          font-weight: 500;
-        }
-        p {
-          font-size: 14px;
-          color: lightgray;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: 1;
-          -webkit-box-orient: vertical;
-        }
       }
     }
-}
 
+    .chats {
+      overflow-y: scroll;
+      height: calc(100% - 120px);
+    }
+      .userChat {
+        display: flex;
+        padding: 10px;
+        gap: 10px;
+        color: white;
+        text-transform: capitalize;
+        cursor: pointer;
+        align-items: center;
+        font-size: 24px;
+        &:hover {
+          background-color: rgb(10, 14, 15);
+        }
 
+        img {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
 
+        .userChatInfo {
+          span {
+            font-size: 18px;
+            font-weight: 500;
+          }
+      
+          p {
+            font-size: 14px;
+            color: lightgray;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+          }
+        }
+    }
+  }
 
-
-
-.chat {
+  .chat {
     position: relative;
     flex: 2;
+  
 
     .chatInfo {
       .reciever {
