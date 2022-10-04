@@ -35,12 +35,6 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-
-
-
-    {/* <Register/> */}
-    {/* <Login/> */}
-    {/* <Home/> */}
     </>
   );
 }
